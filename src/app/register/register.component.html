@@ -1,0 +1,132 @@
+<div class="jumbotron">
+    <div class="container">
+  <form action="/action_page.php" >
+    <h1>Registration</h1>
+    <form [formGroup]="myGroup">
+    <div class="form-group">
+      <label for="email">Full Name:</label>
+      <input type="email" class="form-control"formControlName="fullname"placeholder="Enter your name" id="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Position You are Applying for:</label>
+      <select class="form-select" id="validationDefault04"formControlName="position" required>
+        <option selected disabled value="">Choose...</option>
+        <option value="Angular">Angular Developer</option>
+        <option value="Python">Python Developer</option>
+        <option value="Java">Java Developer</option>
+        <option value="React">React Developer</option>
+      </select>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control"formControlName="email" placeholder="Enter email" id="email">
+      </div>
+      <div class="form-group">
+        <label for="email">Phone Number:</label>
+        <input type="email" class="form-control"formControlName="phonenumber" placeholder="Enter your phonenumber" id="email">
+      </div>
+      <div class="form-group">
+        <label for="email">Country:</label>
+        <input type="email" class="form-control"formControlName="country" placeholder="Enter your country" id="email">
+      </div>
+      <div class="form-group">
+        <label for="email">City:</label>
+        <input type="email" class="form-control"formControlName="city" placeholder="Enter your city" id="email">
+      </div>
+      <div class="form-group">
+        <label for="email">Password:</label>
+        <input type="email" class="form-control"formControlName="password" placeholder="Enter your password" id="email">
+      </div>
+      <div class="form-group">
+        <label for="email"> Confirm Password:</label>
+        <input type="email" class="form-control"formControlName="compassword"placeholder="Enter confirm password" id="email">
+      </div>
+      <div class="form-group">
+        <label for="email" class="gndr">Gender:</label>
+        
+      
+      <div class="form-check form-check-inline">
+      <div class="radio"> Male</div>
+       <input class="form-check-input"formControlName="gender" type="radio" id="mle" value="Male" >
+      </div>
+      <div class="form-check form-check-inline">
+        <div class="radio">Female</div>
+         <input class="form-check-input"formControlName="gender" type="radio" id="fmle" value="Female" >
+        </div>
+        <div class="form-check form-check-inline">
+            <div class="radio">Others</div>
+             <input class="form-check-input" formControlName="gender"type="radio" id="oths" value="Others" >
+            </div>
+            <div class="form-check form-check-inline">
+                <div class="radio">Prefer not to say</div>
+                 <input class="form-check-input"formControlName="gender" type="radio" id="pft" value="Prefer Not to Say" >
+                </div>
+            </div>
+           
+      <div>
+    <button type="submit" class="btn btn-primary" (click)="submitform()">Submit</button>
+</div>
+</form>
+  </form>     
+
+    </div>
+  </div>
+<hr>
+<h2 align="center">Registration Details</h2>
+
+<div class="jumbotron">
+    <div class="container">
+      <div class="container">
+      
+          
+        <table class="table">
+          <thead>
+            <tr >
+              <th>Date</th>
+              <th>Full Name</th>
+              <th>Applying Position</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Country</th>
+              <th>City</th>
+              <th>Password</th>
+              <th>Confirm Password</th>
+              <th>Gender</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let list of customerData">
+              <td>{{dateToday|date:'mediumDate'}}</td>
+              <td>{{list.fullname}}</td>
+              <td>{{list.position}}</td>
+              <td>{{list.email}}</td>
+              <td>{{list.phonenumber}}</td>
+              <td>{{list.country}}</td>
+              <td>{{list.city}}</td>
+              <td>{{list.password}}</td>
+              <td>{{list.compassword}}</td>
+              <td>{{list.gender}}</td>
+        
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+          
+         
+    </div>
+  </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
